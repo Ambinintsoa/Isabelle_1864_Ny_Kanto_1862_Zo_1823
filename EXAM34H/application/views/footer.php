@@ -14,10 +14,10 @@
 
         <p class="footer-links">
             <a href="<?php echo base_url('Liste') ?>">liste</a>
-            <a href="<?php echo base_url('AddObject') ?>">add object</a>
-            <a href="<?php echo base_url('Upload') ?>">upload image</a>
-            <a href="<?php echo base_url('ListEchange/proposition') ?>">Demande de troc</a>
-            <a href="<?php echo base_url('Listhistoric') ?>">Liste des echanges</a>
+            <a href="<?php echo base_url('addobject') ?>">add object</a>
+            <a href="<?php echo base_url('upload') ?>">upload image</a>
+            <a href="<?php echo base_url('listEchange/proposition') ?>">Demande de troc</a>
+            <a href="<?php echo base_url('listhistoric') ?>">Liste des echanges</a>
             <a href="<?php echo base_url('MyList') ?>">Ma Liste </a>
             <a href="<?php echo base_url('LoginAdmin') ?>">Login admin </a>
         </p>

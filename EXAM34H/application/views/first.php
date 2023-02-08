@@ -7,7 +7,7 @@
         <h1 style="color: rgb(255,195,0);">Replace your old thing to another.</h1>
         <p class="lead">This site is created for people who need to exchange object .</p>
         <p class="lead">
-            <a href="<?php echo base_url('login')?>" class="btn btn-lg btn-primary fw-bold border-white bg-white">continue</a>
+            <a href="<?php echo site_url('login')?>" class="btn btn-lg btn-primary fw-bold border-white bg-white">continue</a>
         </p>
     </main>
 </div>

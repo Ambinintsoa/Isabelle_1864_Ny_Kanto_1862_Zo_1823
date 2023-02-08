@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class Admin extends CI_Controller
+class AddObject extends CI_Controller
 {
 
     /**
@@ -21,8 +21,15 @@ class Admin extends CI_Controller
      */
     public function index()
     {
-        $this->load->view('headerDefault');
-        $this->load->view('admin');
-        $this->load->view('footer');
+        if ($this->session->has_userdata('iduser')) {
+            $allCat = array();
+            $allCat['cat'] = $this->Category->getCategory();
+            $this->load->view('Header',$allCat);
+            $this->load->view('addObject',$allCat);
+            $this->load->view('Footer');
+        } else {
+            redirect('');
+        }
     }
+
 }

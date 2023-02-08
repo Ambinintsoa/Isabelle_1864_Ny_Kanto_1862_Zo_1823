@@ -18,7 +18,7 @@
       public function do_upload() { 
         $config['file_name']   = $_FILES['userfile']['name'] ; 
         $config['upload_path']   = './assets/img/'; 
-         $config['allowed_types'] = 'png|jpg|jpeg|avif|gif'; 
+         $config['allowed_types'] = 'gif|jpg|png'; 
          $config['max_size']      = 10000; 
          $config['max_width']     = 10000; 
          $config['max_height']    = 10000;  

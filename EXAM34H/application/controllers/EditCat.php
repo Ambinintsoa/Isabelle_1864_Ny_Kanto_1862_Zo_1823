@@ -26,7 +26,7 @@ class EditCat extends CI_Controller
         $id = array();
         $id['id'] = $i;
         $id['cat'] = $cat;
-        $this->load->view('editCategory',$id);
+        $this->load->view('editcategory',$id);
         $this->load->view('footer');
     }
     public function add($i, $cat)
@@ -35,7 +35,7 @@ class EditCat extends CI_Controller
         $id = array();
         $id['id'] = $i;
         $id['cat'] = $cat;
-        $this->load->view('addCategory', $id);
+        $this->load->view('addcategory', $id);
         $this->load->view('footer');
     }
     public function delete($idobject, $cat)

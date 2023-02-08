@@ -2,15 +2,15 @@
 
 <div class="text-center" style="width:500px;margin:auto;margin-top:150px">
   <main class="form-signin w-100 m-auto">
-    <form action="<?php echo base_url("LoginAdmin/check"); ?>" method="POST">
+    <form action="<?php echo base_url("loginAdmin/check"); ?>" method="POST">
       <img class="mb-4" src="<?php echo base_url('assets/img/troc.png') ?>" alt="" width="72" height="57">
       <h1 class="h3 mb-3 fw-normal">WELCOME ADMIN</h1>
 
       <div class="form-floating mt-5">
-        <input name="email" nametype="email" class="form-control" id="floatingInput" placeholder="name@example.com" required value="Zo@gmail.mg">
+        <input name="email" nametype="email" class="form-control" id="floatingInput" placeholder="name@example.com" required>
       </div>
       <div class="form-floating mt-4">
-        <input name="password" type="password" class="form-control" id="floatingPassword" placeholder="Password" required value="1234">
+        <input name="password" type="password" class="form-control" id="floatingPassword" placeholder="Password" required>
       </div>
 
       <div class="checkbox mb-3">

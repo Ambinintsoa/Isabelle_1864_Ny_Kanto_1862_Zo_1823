@@ -41,7 +41,7 @@ class ListEchange extends CI_Controller {
 			$this->load->view('listProposition',$all);
 			$this->load->view('footer');
 		}else{
-			redirect('');
+			redirect('first');
 		}
 
 		

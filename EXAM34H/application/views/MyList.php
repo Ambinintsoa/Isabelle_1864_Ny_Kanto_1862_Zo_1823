@@ -12,8 +12,8 @@
                 <tr>
                     <th scope="col"><?php echo $listobj['name']; ?></th>
                     <th scope="col"><?php echo $listobj['price']; ?></th>
-                    <th scope="col"><a href="<?php echo site_url('MyList/getpercent/' . $listobj['id'] . '/' . $listobj['iduser'] . '/10'); ?>">+/-10%</a></th>
-                    <th scope="col"><a href="<?php echo site_url('MyList/getpercent/' . $listobj['id'] . '/' . $listobj['iduser'] . '/20'); ?>">+/-20%</a></th>
+                    <th scope="col"><a href="<?php echo site_url('Mylist/getpercent/' . $listobj['id'] . '/' . $listobj['iduser'] . '/10'); ?>">+/-10%</a></th>
+                    <th scope="col"><a href="<?php echo site_url('Mylist/getpercent/' . $listobj['id'] . '/' . $listobj['iduser'] . '/20'); ?>">+/-20%</a></th>
                 </tr>
             <?php } ?>
         </tbody>

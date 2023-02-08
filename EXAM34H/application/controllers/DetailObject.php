@@ -8,6 +8,6 @@ class DetailObject extends CI_Controller
         $this->load->view('header');
         $id = array();
         $id['id'] = $i;
-        $this->load->view('detailObject', $id);
+        $this->load->view('detailobject', $id);
     } 
 }

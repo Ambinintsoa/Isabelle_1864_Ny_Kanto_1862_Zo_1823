@@ -1,6 +1,6 @@
 <?php
 if (!$this->session->has_userdata('iduser')) {
-  redirect('http://testa.rf.gd');  
+  redirect('');  
 }
 ?>
 <!DOCTYPE html>
@@ -33,7 +33,7 @@ if (!$this->session->has_userdata('iduser')) {
     <input type="submit" value="search"class="btn" style="background-color:#292c2f;color:#fff;">
 </a></article>
 </form>  
-        <a href="<?php echo site_url('Login/logout')?>"><button class="btn btn-secondary">Deconnexion</button></a>
+      <a href="<?php echo site_url('Login/logout')?>"><button class="btn btn-secondary">Deconnexion</button></a>
         </div>
 
 </header>

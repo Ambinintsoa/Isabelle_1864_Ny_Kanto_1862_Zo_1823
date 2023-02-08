@@ -64,7 +64,7 @@ CREATE TABLE IF NOT EXISTS proposition (
     FOREIGN KEY (idobject1) REFERENCES object(id),
     FOREIGN KEY (idobject2) REFERENCES object(id)
 );
-
+INSERT INTO proposition(hiredate,idobject1,idobject2,isAccept) values('2023-03-01',1,3,0);
 
 INSERT INTO users (firstname, lastname, email, password, isAdmin)
 values ('Rakoto', 'Zo', 'Zo@gmail.mg', '1234', 1),
@@ -103,3 +103,68 @@ values (2, 'chaise.jpg'),
     (1, 'table.jpg'),
     (5, 'veste.jpg'),
     (3, 'chaussure.jpg');
+
+CREATE OR REPLACE VIEW v_category (
+    idcategory,
+    nomcategory,
+    idobject,
+    name,
+    iduser,
+    firstname,
+    lastname,
+    price,
+    descri
+) AS (
+    SELECT category.id,
+    category.name,
+    object.id,
+    object.name,
+    users.id,
+    users.firstname,
+     users.lastname,
+    object.price,
+    object.descri
+FROM object_category
+    JOIN object on object_category.idobject = object.id
+    JOIN category on object_category.idcategory = category.id
+    JOIN users on object.iduser = users.id
+);
+
+
+CREATE OR REPLACE VIEW echange (
+    idobject1,
+    nomobject1,
+    idobject2,
+    nomobject2,
+    isaccept,
+    hiredate,
+    id1,
+    firstname1,
+    lastname1,
+    id2,
+    firstname2,
+    lastname2
+) AS (
+    SELECT o1.id, o1.name, o2.id, o2.name, proposition.isAccept, proposition.hiredate,u1.id,u1.firstname,u1.lastname,u2.id,u2.firstname,u2.lastname  FROM proposition
+        JOIN object o1 ON proposition.idobject1 = o1.id
+        JOIN object o2 ON proposition.idobject2 = o2.id
+        JOIN users u1 ON o1.iduser = u1.id
+        JOIN users u2 ON o2.iduser = u2.id
+);
+create or replace view detailobj (
+	idobject,
+    name,
+    descri,
+    price,
+    iduser,
+    src
+) as (
+    select object.id,
+    object.name,
+    object.descri,
+    object.price,
+    object.iduser,
+    image.src
+    from object
+    join image on object.id=image.idobject
+    );

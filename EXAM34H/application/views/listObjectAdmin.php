@@ -16,9 +16,9 @@
                     <th scope="col"><?php echo $listobj['name']; ?></th>
                     <th scope="col"><?php echo $listobj['price']; ?></th>
                     <th scope="col"><?php echo $listobj['nomcategory']; ?></th>
-                    <th scope="col"><a href="<?php echo site_url('EditCat/add/'.$listobj['idobject']."/".$listobj['idcategory']); ?>">Add</a></th>
-                    <th scope="col"><a href="<?php echo site_url('EditCat/edit/'. $listobj['idobject']."/".$listobj['idcategory']); ?>">Edit</a></th>
-                    <th scope="col"><a href="<?php echo site_url('EditCat/delete/'. $listobj['idobject']."/".$listobj['idcategory']); ?>">Delete</a></th>
+                    <th scope="col"><a href="<?php echo site_url('Editcat/add/'.$listobj['idobject']."/".$listobj['idcategory']); ?>">Add</a></th>
+                    <th scope="col"><a href="<?php echo site_url('Editcat/edit/'. $listobj['idobject']."/".$listobj['idcategory']); ?>">Edit</a></th>
+                    <th scope="col"><a href="<?php echo site_url('Editcat/delete/'. $listobj['idobject']."/".$listobj['idcategory']); ?>">Delete</a></th>
                 </tr>
             <?php } ?>
         </tbody>

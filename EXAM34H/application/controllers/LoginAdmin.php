@@ -20,7 +20,7 @@ class LoginAdmin extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('headerDefault');
+		$this->load->view('headerdefault');
         $this->load->view('loginAdmin');
 		$this->load->view('footer');
 		

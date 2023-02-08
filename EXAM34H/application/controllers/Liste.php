@@ -19,15 +19,14 @@ class Liste extends CI_Controller {
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
 	public function index(){
-        
 		$this->listCategory();
-        $this->load->view('footer');
+        $this->load->view('Footer');
 		
 	}
 	public function listCategory(){
 		$allCat = array();
 		$allCat['cat'] = $this->Category->getCategory();
-		$this->load->view('header',$allCat);
+		$this->load->view('Header', $allCat);
 		$this->load->view('categorie', $allCat);
 	}
 	public function listObjectByCategory($id){
@@ -35,7 +34,7 @@ class Liste extends CI_Controller {
 		$allCat['cat'] = $this->Category->getObjWithCategory($id,$this->session->iduser);
 		$this->listCategory();
 		$this->load->view('list', $allCat);
-		$this->load->view('footer');
+		$this->load->view('Footer');
 	}
 	public function listObjectSearch(){
 		$indice=$this->input->get('indice');
@@ -44,7 +43,7 @@ class Liste extends CI_Controller {
 		$allCat['cat'] = $this->Object->getObjectSearched($indice,$category,$this->session->iduser);
 		$this->listCategory();
 		$this->load->view('list', $allCat);
-		$this->load->view('footer');
+		$this->load->view('Footer');
 	}
 	public function listObject(){
 		$allCat = array();
